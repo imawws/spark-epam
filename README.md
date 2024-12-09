@@ -29,29 +29,22 @@ Restaurant and Weather Data
 Load Data:
 Load restaurant data (CSV) and weather data (Parquet).
 
-python
-Копировать код
 restaurants_df = spark.read.csv(restaurant_data_path, header=True, inferSchema=True)
 weather_df = spark.read.parquet(weather_data_path)
 Missing Coordinates:
 Filter restaurants with missing coordinates.
 
-python
-Копировать код
 missing_coordinates_df = restaurants_df.filter(col("lat").isNull() | col("lng").isNull())
 Geocoding:
 Use OpenCage Geocoding API to fetch coordinates for missing values.
 
-python
-Копировать код
 def get_coordinates(address):
     # Call OpenCage API and return latitude, longitude
     return lat, lng
 Geohash:
 Generate geohashes for restaurant locations.
 
-python
-Копировать код
+
 def generate_geohash(latitude, longitude):
     return geohash2.encode(latitude, longitude, precision=4)
 Steps to Run
