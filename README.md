@@ -56,4 +56,4 @@ Open http://localhost:8888 in your browser to start using Jupyter Notebooks.
 
 Conclusion
 This setup allows for scalable data processing with Spark and interactive analysis using Jupyter. You can extend the code for more complex data processing tasks and explore the power of PySpark with distributed computing.
-
+<img width="1271" alt="image" src="https://github.com/user-attachments/assets/0049bfb7-049e-4bd7-846c-e37a6962876f">
